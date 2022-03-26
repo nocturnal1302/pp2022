@@ -1,13 +1,24 @@
-def input_student_count():
+studentCount = int(input('Enter number of students: '))
+if studentCount > 0:
     pass
+else:
+    print('Number of students must be bigger than 0.')
+    quit()
+
+student_list = []
+course_list = []
 
 def add_student():
-    # input student info
-    name = input('Student name: ')
-    id = input('Student ID: ')
-    DoB = input('Date of Birth: ')
+    for i in range(studentCount):
+        print(f'Enter information for student {i + 1}:')
+        name = input('- Student name: ')
+        id = input('- Student ID: ')
+        DoB = input('- Date of Birth: ')
 
-    # add to student dict
+        student = (name, id, DoB)  # tuple
+
+        student_list.append(student)  # add tuple as an element to end of list
+        print('\n')
 
 def add_course_count():
     pass
@@ -17,21 +28,22 @@ def add_course():
     # add to course dict
     pass
 
-def select_course():
+def input_mark_for_course():
     # choose from course dict
+    pass
 
 def list_course():
     pass
 
 def list_student():
     # for loop
-    # loop through list, print items
+    # loop through list, print student names
     # if empty, prompt to add student
-    pass
+    [print(records) for records in student_list]
 
 def show_mark():
     pass
 
 
-
 add_student()
+list_student()
